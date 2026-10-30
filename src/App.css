@@ -1,0 +1,123 @@
+:root {
+  --fond: #f5f1ea;
+  --carte: #ffffff;
+  --texte: #2b2b2b;
+  --discret: #8a8a8a;
+  --accent: #ff6b35;
+  --accent-fonce: #e55a28;
+  --ligne: #ece7de;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 16px;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.app {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 32px 28px;
+  background: var(--carte);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(60, 40, 20, 0.08);
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.saisie {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--texte);
+  background: #faf8f4;
+  border: 1.5px solid var(--ligne);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-ajouter {
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+
+.btn-ajouter:hover {
+  background: var(--accent-fonce);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 4px;
+  font-size: 17px;
+  border-bottom: 1px solid var(--ligne);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.btn-supprimer {
+  padding: 6px 8px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  opacity: 0.5;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.btn-supprimer:hover {
+  opacity: 1;
+  background: #fdeae3;
+}
+
+.vide {
+  margin: 8px 0 0;
+  text-align: center;
+  color: var(--discret);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
