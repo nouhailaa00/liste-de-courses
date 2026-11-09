@@ -5,7 +5,7 @@ function App() {
   const [articles, setArticles] = useState([]);
   const ajouterArticle = () => {
     const nom = texte.trim();
-    if (nom === "") return; // on ignore les champs vides
+    if (nom === "") return;
     setArticles([...articles, { id: Date.now(), nom }]);
     setTexte("");
   };
